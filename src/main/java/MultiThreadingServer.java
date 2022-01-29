@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 
 public class MultiThreadingServer {
-    private static final int PORT = 8189;
+    private static final int PORT = 443;
 
     public static void main(String[] args) {
         new MultiThreadingServer().start();
