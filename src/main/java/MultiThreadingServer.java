@@ -9,7 +9,7 @@ public class MultiThreadingServer {
     }
 
     public void start() {
-        try (var serverSocket = new ServerSocket(PORT)) {
+        try (ServerSocket serverSocket = new ServerSocket(PORT)) {
             System.out.println("Server started");
             System.out.println("Waiting or connection...");
             while (true) {

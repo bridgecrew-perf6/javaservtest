@@ -90,7 +90,7 @@ public class ClientHandler extends Thread {
     }
 
     private static void handleMessage(int from, String message) {
-        if (message.isBlank())
+        if (message.trim().equals(""))
             return;
 
         int toIndex = getReceiverFromString(message);
@@ -106,7 +106,7 @@ public class ClientHandler extends Thread {
     }
 
     private static void sendMessage(int from, String message, ClientHandler clientHandler) {
-        if (message.isBlank()) return;
+        if (message.trim().equals("")) return;
         if (!clientHandler.isInterrupted())
             try {
                 if (from == -1) {
